@@ -62,12 +62,14 @@ const ScanScreen =({navigation}) => {
           <TextInput
             style={styles.input}
             placeholder="Enter name"
+            placeholderTextColor={colors.font}
             value={name}
             onChangeText={setName}
           />
           <TextInput
             style={styles.input}
             placeholder="Enter notes"
+            placeholderTextColor={colors.font}
             value={notes}
             onChangeText={setNotes}
             multiline

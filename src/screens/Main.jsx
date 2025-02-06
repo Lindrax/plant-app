@@ -3,7 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons'; 
-import PlantViewScreen from './PlantScreen';
 import { TouchableOpacity, Text, View } from 'react-native';
 
 import ListScreen from './ListScreen';

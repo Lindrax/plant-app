@@ -27,6 +27,7 @@ const ListScreen = ({ navigation }) => {
       <TextInput
         style={styles.searchInput}
         placeholder="Search plants..."
+        placeholderTextColor={colors.font}
         value={query}
         onChangeText={setQuery}
       />
