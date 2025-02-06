@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
+import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput, KeyboardAvoidingView, Platform } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
 import * as ImagePicker from 'expo-image-picker';
 
@@ -45,6 +45,7 @@ const editPlant = () => {
 };
 
   return (
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'height' : undefined} style={{ flex: 1 }} keyboardVerticalOffset={100}>
     <View style={styles.container}>
       { editing ? (
         <View>
@@ -88,6 +89,7 @@ const editPlant = () => {
         </View>
         )}
     </View>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -115,7 +117,7 @@ const getStyles = (colors) => StyleSheet.create({
   saveButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'center',
+    
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 30,
@@ -165,7 +167,6 @@ const getStyles = (colors) => StyleSheet.create({
     color: colors.font,
   },
   imagePicker: {
-    alignItems: 'center',
     marginBottom: 20,
   },
   changeImageText: {
