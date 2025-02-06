@@ -46,20 +46,16 @@ The app follows a component-based architecture using React Native with Expo for 
 
 ### List View
 
-![List View ](./documents/image.png)
-
-![List View Darkmode](./documents/image-1.png)
+<img src="./documents/image.png" alt="List View" width="250">
+<img src="./documents/image-1.png" alt="List View Darkmode" width="250">
 
 ### Scan View
 
-![Scan View](./documents/image-2.png)
-
-![Scan View](./documents/image-3.png)
+<img src="./documents/image-2.png" alt="Scan View" width="250">
+<img src="./documents/image-3.png" alt="Scan View Darkmode" width="250">
 
 ### Detail View
 
-![Detail View (no notes)](./documents/image-4.png)
-
-![Detail View with notes](./documents/image-6.png)
-
-![Edit view](./documents/image-5.png)
+<img src="./documents/image-4.png" alt="Detail View (no notes)" width="250">
+<img src="./documents/image-6.png" alt="Detail View with notes" width="250">
+<img src="./documents/image-5.png" alt="Edit View" width="250">
