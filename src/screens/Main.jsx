@@ -3,7 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons'; 
-import { TouchableOpacity, Text, View } from 'react-native';
+import { TouchableOpacity, View } from 'react-native';
 
 import ListScreen from './ListScreen';
 import ScanScreen from './ScanScreen';
@@ -28,7 +28,7 @@ const ListStackNavigator = () => {
         headerStyle: { backgroundColor: colors.background }, 
         headerTintColor: colors.font,  
       }}/>
-
+      
       <Stack.Screen name="PlantView" component={PlantScreen} 
       options={{ 
         title: 'Plant Details',
