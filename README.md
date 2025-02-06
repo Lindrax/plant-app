@@ -33,7 +33,7 @@ The app follows a component-based architecture using React Native with Expo for 
   - **Settings Screen**: Placeholder.
   - **Profile Screen**: Placeholder
   - **Plant Detail View**: Displays plant details with options for editing name, notes and picture. You can choose a picture from your gallery.
-- **Theme Support**: Implements a dark/light theme using AsyncStorage.
+- **Theme Support**: Implements a dark/light theme using AsyncStorage and React context. Allows uniform theme across the whole app and changes are reflected instantly.
 
 ### Technical Decisions
 
