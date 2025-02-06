@@ -28,12 +28,12 @@ The app follows a component-based architecture using React Native with Expo for 
 - **Context API**: Manages global states for plants and themes.
 - **Navigation**: Uses `react-navigation` to handle tab and stack-based navigation.
 - **Screens**:
-  - **List Screen**: Displays a list of stored plants. Opportunity to filter shown plants, and delete them
+  - **List Screen**: Displays a list of stored plants. Opportunity to filter shown plants, and delete them. You can click on the plant to see the detail view.
   - **Scan Screen**: Enables the user to capture and add a new plant.
   - **Settings Screen**: Placeholder.
   - **Profile Screen**: Placeholder
-  - **Plant Detail View**: Displays plant details with options for editing name, notes and picture. You can choose a picture from gallery.
-- **Theme Support**: Implements a dark/light theme using AsyncStorage.
+  - **Plant Detail View**: Displays plant details with options for editing name, notes and picture. You can choose a picture from your gallery.
+- **Theme Support**: Implements a dark/light theme using AsyncStorage and React context. Allows uniform theme across the whole app and changes are reflected instantly.
 
 ### Technical Decisions
 
