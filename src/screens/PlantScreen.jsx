@@ -50,7 +50,8 @@ const editPlant = () => {
         <View>
           <TouchableOpacity onPress={changeImage} style={styles.imagePicker}>
             <Image source={{ uri: image  }} style={styles.image} />
-            <Text style={styles.changeImageText}>Change Image</Text>
+                <Ionicons name="image-outline" size={24} color={colors.font} />
+              <Text style={styles.changeImageText}>Change Image</Text>
           </TouchableOpacity>
           <Text style={{color: colors.font}} > Edit name: <TextInput           
             style={styles.input}
@@ -67,10 +68,10 @@ const editPlant = () => {
             multiline
           />
           </Text>
-
-          <TouchableOpacity style={styles.editButton} onPress={ editPlant}>
-            <Text style={{color: colors.font}}>Save changes</Text>
-          </TouchableOpacity>
+        <TouchableOpacity style={styles.saveButton} onPress={editPlant}>
+          <Ionicons name="save" size={30} color={colors.font} />
+          <Text style={styles.saveButtonText}>Save</Text>
+        </TouchableOpacity>
         </View>)
         : (
         <View>
@@ -81,11 +82,11 @@ const editPlant = () => {
             {plant.notes ? plant.notes : '🌱 No additional notes provided.'}
           </Text>
           <TouchableOpacity style={styles.editButton} onPress={() => setEditing(true)}>
-            <Ionicons name='create' size={35} color={ colors.font} />
+            <Ionicons name="create" size={30} color={colors.font} />
+            <Text style={styles.editButtonText}>Edit</Text>
           </TouchableOpacity>
         </View>
-        )
-      }
+        )}
     </View>
   );
 };
@@ -106,11 +107,41 @@ const getStyles = (colors) => StyleSheet.create({
     color: colors.font,
     borderColor: colors.font,
   },
-  editButton: { 
-    alignSelf: 'center', 
-    borderRadius: 40, 
-    backgroundColor: colors.backgroundColor, 
-    padding: 10
+  changeImageText: {
+    marginTop: 5,
+    color: colors.font,
+    fontWeight: 'bold',
+  },
+  saveButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 30,
+    marginTop: 10,
+  },
+  saveButtonText: {
+    color: colors.font,
+    fontSize: 16,
+    marginLeft: 8,
+    fontWeight: 'bold',
+  },
+  editButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 30,
+    marginTop: 10,
+  },
+  editButtonText: {
+    color: colors.font,
+    fontSize: 16,
+    marginLeft: 8,
+    fontWeight: 'bold',
   },
   image: {
     alignSelf:'center',

@@ -6,7 +6,7 @@
 
 1. Clone the repository:
    ```sh
-   git clone <repository_url>
+   git clone https://github.com/Lindrax/plant-app.git
    cd plant-app
    ```
 2. Install dependencies:
@@ -17,13 +17,13 @@
    ```sh
    npm start
    ```
-4. Scan the QR code with the Expo Go app on your mobile device, run it in an emulator or access the web interface in localhost:8081
+4. Scan the QR code with the Expo Go app on your mobile device, run it in an emulator or access the web interface in http://localhost:8081
 
 ## Architecture and Technical Decisions
 
 ### Architecture
 
-The app follows a **component-based architecture** using React Native with **Expo** for easy development and deployment. It is structured into several key components:
+The app follows a component-based architecture using React Native with Expo for easy development and deployment. It is structured into several key components:
 
 - **Context API**: Manages global states for plants and themes.
 - **Navigation**: Uses `react-navigation` to handle tab and stack-based navigation.
@@ -32,7 +32,7 @@ The app follows a **component-based architecture** using React Native with **Exp
   - **Scan Screen**: Enables the user to capture and add a new plant.
   - **Settings Screen**: Placeholder.
   - **Profile Screen**: Placeholder
-  - **Plant Detail View**: Displays plant details with editing options.
+  - **Plant Detail View**: Displays plant details with options for editing name, notes and picture. You can choose a picture from gallery.
 - **Theme Support**: Implements a dark/light theme using AsyncStorage.
 
 ### Technical Decisions
@@ -46,12 +46,20 @@ The app follows a **component-based architecture** using React Native with **Exp
 
 ### List View
 
-![List View Screenshot](./screenshots/list-view.png)
+![List View ](./documents/image.png)
+
+![List View Darkmode](./documents/image-1.png)
 
 ### Scan View
 
-![Scan View Screenshot](./screenshots/scan-view.png)
+![Scan View](./documents/image-2.png)
 
-### Bottom Navigation Bar
+![Scan View](./documents/image-3.png)
 
-![Navigation Bar Screenshot](./screenshots/navigation-bar.png)
+### Detail View
+
+![Detail View (no notes)](./documents/image-4.png)
+
+![Detail View with notes](./documents/image-6.png)
+
+![Edit view](./documents/image-5.png)
