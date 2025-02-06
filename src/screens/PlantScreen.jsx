@@ -113,11 +113,12 @@ const getStyles = (colors) => StyleSheet.create({
     marginTop: 5,
     color: colors.font,
     fontWeight: 'bold',
+    
   },
   saveButton: {
     flexDirection: 'row',
     alignItems: 'center',
-    
+    justifyContent : 'center',
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 30,
@@ -128,6 +129,7 @@ const getStyles = (colors) => StyleSheet.create({
     fontSize: 16,
     marginLeft: 8,
     fontWeight: 'bold',
+    justifyContent: 'center',
   },
   editButton: {
     flexDirection: 'row',
@@ -168,6 +170,7 @@ const getStyles = (colors) => StyleSheet.create({
   },
   imagePicker: {
     marginBottom: 20,
+    alignItems: 'center',
   },
   changeImageText: {
     marginTop: 10,
