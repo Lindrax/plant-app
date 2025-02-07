@@ -5,11 +5,11 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { Ionicons } from '@expo/vector-icons'; 
 import { TouchableOpacity, View } from 'react-native';
 
-import ListScreen from './ListScreen';
-import ScanScreen from './ScanScreen';
-import ProfileScreen from './ProfileScreen';
-import SettingsScreen from './SettingsScreen';
-import PlantScreen from './PlantScreen';
+import ListScreen from './List/ListScreen';
+import ScanScreen from './List/ScanScreen';
+import ProfileScreen from './Profile/ProfileScreen';
+import SettingsScreen from './Settings/SettingsScreen';
+import PlantScreen from './List/PlantScreen';
 
 import { ThemeContext } from '../context/ThemeContext';
 import getColors from '../styles/themeColors';

@@ -2,8 +2,8 @@
 import { StyleSheet, Text, View } from "react-native"
 import { useContext } from "react"
 
-import { ThemeContext } from "../context/ThemeContext"
-import getColors from "../styles/themeColors"
+import { ThemeContext } from "../../context/ThemeContext"
+import getColors from "../../styles/themeColors"
 
 const ProfileScreen = ({navigation}) => {
   const { theme } = useContext(ThemeContext)

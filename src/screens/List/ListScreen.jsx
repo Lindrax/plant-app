@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, TextInput} from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
 
-import { PlantContext } from '../context/PlantContext';
-import { ThemeContext } from '../context/ThemeContext'; 
-import getColors from '../styles/themeColors';
+import { PlantContext } from '../../context/PlantContext';
+import { ThemeContext } from '../../context/ThemeContext'; 
+import getColors from '../../styles/themeColors';
 
 const ListScreen = ({ navigation }) => {
   const { plants, setPlants } = useContext(PlantContext);

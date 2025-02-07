@@ -3,9 +3,9 @@ import { View, Text, Image, StyleSheet, TouchableOpacity, TextInput, KeyboardAvo
 import { Ionicons } from '@expo/vector-icons'; 
 import * as ImagePicker from 'expo-image-picker';
 
-import { ThemeContext } from '../context/ThemeContext';
-import getColors from '../styles/themeColors';
-import { PlantContext } from '../context/PlantContext';
+import { ThemeContext } from '../../context/ThemeContext';
+import getColors from '../../styles/themeColors';
+import { PlantContext } from '../../context/PlantContext';
 
 const PlantScreen = ({ route, navigation }) => {
   const { theme } = useContext(ThemeContext);

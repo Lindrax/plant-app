@@ -3,9 +3,9 @@ import { useState, useRef, useContext } from 'react';
 import { Button, StyleSheet, Text, TextInput, TouchableOpacity, View, Image, KeyboardAvoidingView, Platform, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
 
-import { PlantContext } from '../context/PlantContext';
-import { ThemeContext } from '../context/ThemeContext';
-import getColors from '../styles/themeColors';
+import { PlantContext } from '../../context/PlantContext';
+import { ThemeContext } from '../../context/ThemeContext';
+import getColors from '../../styles/themeColors';
 
 const ScanScreen =({navigation}) => {
   const { addPlant } = useContext(PlantContext);
