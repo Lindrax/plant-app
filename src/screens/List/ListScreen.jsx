@@ -18,8 +18,9 @@ const ListScreen = ({ navigation }) => {
   
 
   const deletePlant = (plantToDelete) => {
+    if (confirm('Do you want to delete this plant')) {
     const updatedPlants = plants.filter((plant) => plant.name !== plantToDelete)
-    setPlants(updatedPlants)
+    setPlants(updatedPlants)}
   }
 
   return (
