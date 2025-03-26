@@ -1,4 +1,20 @@
 # Plant App
+A React Native application for a plant database
+
+## Screenshots
+
+### List View
+
+<img src="./documents/image.png" alt="List View" width="250"><img src="./documents/image-1.png" alt="List View Darkmode" width="250">
+
+### Scan View
+
+<img src="./documents/image-2.png" alt="Scan View" width="250"><img src="./documents/image-3.png" alt="Scan View Darkmode" width="250">
+
+### Detail View
+
+<img src="./documents/image-4.png" alt="Detail View (no notes)" width="250"><img src="./documents/image-6.png" alt="Detail View with notes" width="250"><img src="./documents/image-5.png" alt="Edit View" width="250">
+
 
 ## Instructions to Run the App
 
@@ -42,16 +58,4 @@ The app follows a component-based architecture using React Native with Expo for 
 - **React Navigation**: Provides a clean and scalable navigation system.
 - **AsyncStorage for theme persistence**: Enables user preferences to be saved across sessions.
 
-## Screenshots
 
-### List View
-
-<img src="./documents/image.png" alt="List View" width="250"><img src="./documents/image-1.png" alt="List View Darkmode" width="250">
-
-### Scan View
-
-<img src="./documents/image-2.png" alt="Scan View" width="250"><img src="./documents/image-3.png" alt="Scan View Darkmode" width="250">
-
-### Detail View
-
-<img src="./documents/image-4.png" alt="Detail View (no notes)" width="250"><img src="./documents/image-6.png" alt="Detail View with notes" width="250"><img src="./documents/image-5.png" alt="Edit View" width="250">
