@@ -2,9 +2,9 @@ import React, { useContext, useState } from 'react';
 import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, TextInput} from 'react-native';
 import { Ionicons } from '@expo/vector-icons'; 
 
-import { PlantContext } from '../context/PlantContext';
-import { ThemeContext } from '../context/ThemeContext'; 
-import getColors from '../styles/themeColors';
+import { PlantContext } from '../../context/PlantContext';
+import { ThemeContext } from '../../context/ThemeContext'; 
+import getColors from '../../styles/themeColors';
 
 const ListScreen = ({ navigation }) => {
   const { plants, setPlants } = useContext(PlantContext);
@@ -18,8 +18,9 @@ const ListScreen = ({ navigation }) => {
   
 
   const deletePlant = (plantToDelete) => {
+    if (confirm('Do you want to delete this plant')) {
     const updatedPlants = plants.filter((plant) => plant.name !== plantToDelete)
-    setPlants(updatedPlants)
+    setPlants(updatedPlants)}
   }
 
   return (
@@ -27,6 +28,7 @@ const ListScreen = ({ navigation }) => {
       <TextInput
         style={styles.searchInput}
         placeholder="Search plants..."
+        placeholderTextColor={colors.font}
         value={query}
         onChangeText={setQuery}
       />

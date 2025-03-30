@@ -1,4 +1,20 @@
 # Plant App
+A React Native application for a plant database
+
+## Screenshots
+
+### List View
+
+<img src="./documents/image.png" alt="List View" width="250"><img src="./documents/image-1.png" alt="List View Darkmode" width="250">
+
+### Scan View
+
+<img src="./documents/image-2.png" alt="Scan View" width="250"><img src="./documents/image-3.png" alt="Scan View Darkmode" width="250">
+
+### Detail View
+
+<img src="./documents/image-4.png" alt="Detail View (no notes)" width="250"><img src="./documents/image-6.png" alt="Detail View with notes" width="250"><img src="./documents/image-5.png" alt="Edit View" width="250">
+
 
 ## Instructions to Run the App
 
@@ -26,14 +42,14 @@
 The app follows a component-based architecture using React Native with Expo for easy development and deployment. It is structured into several key components:
 
 - **Context API**: Manages global states for plants and themes.
-- **Navigation**: Uses `react-navigation` to handle tab and stack-based navigation.
+- **Navigation**: Uses `react-navigation` to handle tab and stack-based navigation. File structure follows the navigation structure for improved readability
 - **Screens**:
-  - **List Screen**: Displays a list of stored plants. Opportunity to filter shown plants, and delete them
-  - **Scan Screen**: Enables the user to capture and add a new plant.
+  - **List Screen**: Displays a list of stored plants. Opportunity to filter shown plants, and delete them. You can click on the plant to see the detail view.
+    - **Scan Screen**: Enables the user to capture and add a new plant.
+    - **Plant Detail View**: Displays plant details with options for editing name, notes and picture. You can choose a picture from your gallery.
   - **Settings Screen**: Placeholder.
   - **Profile Screen**: Placeholder
-  - **Plant Detail View**: Displays plant details with options for editing name, notes and picture. You can choose a picture from gallery.
-- **Theme Support**: Implements a dark/light theme using AsyncStorage.
+- **Theme Support**: Implements a dark/light theme using AsyncStorage and React context. Allows uniform theme across the whole app and changes are reflected instantly.
 
 ### Technical Decisions
 
@@ -42,16 +58,4 @@ The app follows a component-based architecture using React Native with Expo for 
 - **React Navigation**: Provides a clean and scalable navigation system.
 - **AsyncStorage for theme persistence**: Enables user preferences to be saved across sessions.
 
-## Screenshots
 
-### List View
-
-<img src="./documents/image.png" alt="List View" width="250"><img src="./documents/image-1.png" alt="List View Darkmode" width="250">
-
-### Scan View
-
-<img src="./documents/image-2.png" alt="Scan View" width="250"><img src="./documents/image-3.png" alt="Scan View Darkmode" width="250">
-
-### Detail View
-
-<img src="./documents/image-4.png" alt="Detail View (no notes)" width="250"><img src="./documents/image-6.png" alt="Detail View with notes" width="250"><img src="./documents/image-5.png" alt="Edit View" width="250">
