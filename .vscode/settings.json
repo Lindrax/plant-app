@@ -1,0 +1,5 @@
+{
+  "appService.zipIgnorePattern": ["node_modules{,/**}", ".vscode{,/**}"],
+  "appService.defaultWebAppToDeploy": "/subscriptions/d490ce7a-e2d9-43cc-a40c-b575d6f4226b/resourceGroups/Plant/providers/Microsoft.Web/sites/Plant-app",
+  "appService.deploySubpath": "dist"
+}
