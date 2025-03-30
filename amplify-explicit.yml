@@ -14,7 +14,8 @@ frontend:
           fi
     build:
       commands:
-        - - npx expo export --platform web
+        - npx expo export --platform web
+        - cp -r ./node_modules/@expo/vector-icons/build/vendor/react-native-vector-icons/Fonts ./web-build/assets/fonts
   artifacts:
     baseDirectory: web-build
     files:
