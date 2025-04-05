@@ -1,27 +1,29 @@
 import React, { useContext, useState } from 'react';
-import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, TextInput} from 'react-native';
-import { Ionicons } from '@expo/vector-icons'; 
+import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, TextInput } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
 
 import { PlantContext } from '../../context/PlantContext';
-import { ThemeContext } from '../../context/ThemeContext'; 
+import { ThemeContext } from '../../context/ThemeContext';
 import getColors from '../../styles/themeColors';
 
 const ListScreen = ({ navigation }) => {
   const { plants, setPlants } = useContext(PlantContext);
-  const { theme} = useContext(ThemeContext); 
-  const [query, setQuery] = useState('')
+  const { theme } = useContext(ThemeContext);
+  const [query, setQuery] = useState('');
 
-  const colors = getColors(theme); 
-  const styles = getStyles(colors)
+  const colors = getColors(theme);
+  const styles = getStyles(colors);
 
-  const queryedPlants = plants.filter((p) => (p.name.toLowerCase()).includes(query.toLowerCase()) )
-  
+  const queryedPlants = plants.filter((p) =>
+    p.name.toLowerCase().includes(query.toLowerCase())
+  );
 
   const deletePlant = (plantToDelete) => {
     if (confirm('Do you want to delete this plant')) {
-    const updatedPlants = plants.filter((plant) => plant.name !== plantToDelete)
-    setPlants(updatedPlants)}
-  }
+      const updatedPlants = plants.filter((plant) => plant.name !== plantToDelete);
+      setPlants(updatedPlants);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -45,29 +47,33 @@ const ListScreen = ({ navigation }) => {
               <View style={styles.textContainer}>
                 <Text style={styles.plantName}>{item.name}</Text>
                 <Text style={styles.dateAdded}>Added on: {item.date}</Text>
-                <TouchableOpacity style={styles.deleteButton} onPress={() =>deletePlant(item.name)}>
-                  <Ionicons name='trash' size={20} color={ colors.font} />
-                  </TouchableOpacity>
+                <TouchableOpacity
+                  style={styles.deleteButton}
+                  onPress={() => deletePlant(item.name)}
+                >
+                  <Ionicons name="trash" size={20} color={colors.font} />
+                </TouchableOpacity>
               </View>
             </View>
           </TouchableOpacity>
         )}
+        contentContainerStyle={styles.listContent}
       />
       <TouchableOpacity
         style={styles.addButton}
         onPress={() => navigation.navigate('ScanView')}
       >
-        <Ionicons name='camera' size={32} color={ colors.font} />
+        <Ionicons name="camera" size={32} color={colors.font} />
       </TouchableOpacity>
     </View>
   );
 };
 
-const getStyles = (colors) => StyleSheet.create({
-    container: { 
-      flex: 1, 
-      padding: 20, 
-      backgroundColor: colors.background, 
+const getStyles = (colors) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: colors.background,
     },
     searchInput: {
       height: 40,
@@ -75,9 +81,12 @@ const getStyles = (colors) => StyleSheet.create({
       borderWidth: 1,
       borderRadius: 10,
       paddingLeft: 10,
-      marginBottom: 20,
+      margin: 20,
       color: colors.font,
       fontSize: 16,
+    },
+    listContent: {
+      paddingBottom: 80, // Add padding to avoid overlapping with the floating button
     },
     listItem: {
       flexDirection: 'row',
@@ -86,35 +95,47 @@ const getStyles = (colors) => StyleSheet.create({
       borderBottomColor: colors.listItem,
       backgroundColor: colors.listItem,
       borderRadius: 10,
-      marginBottom: 10
+      marginHorizontal: 20,
+      marginBottom: 10,
     },
-    plantName: { fontSize: 18, 
-      fontWeight: 'bold', 
-      paddingTop: 2, 
-      paddingLeft: 10, 
-      color: colors.font 
+    plantName: {
+      fontSize: 18,
+      fontWeight: 'bold',
+      paddingTop: 2,
+      paddingLeft: 10,
+      color: colors.font,
     },
-    dateAdded: { fontSize: 14, 
-      color: colors.date, 
-      paddingLeft: 10, 
-      paddingTop: 5 
+    dateAdded: {
+      fontSize: 14,
+      color: colors.date,
+      paddingLeft: 10,
+      paddingTop: 5,
     },
-    addButton: { alignSelf: 'center', 
-      borderRadius: 40, 
-      backgroundColor: 'colors.backgroundColor', 
-      justifyContent: 'flex-end'
+    addButton: {
+      position: 'absolute',
+      bottom: 20,
+      alignSelf: 'center',
+      backgroundColor: colors.accent, // Use a contrasting color for visibility
+      borderRadius: 40,
+      padding: 15,
+      elevation: 5, 
+      shadowColor: '#000',
+      shadowOffset: { width: 0, height: 2 },
+      shadowOpacity: 0.5,
+      shadowRadius: 3.84,
+      justifyContent: 'center',
+      alignItems: 'center',
     },
     deleteButton: {
-      borderRadius: 40, 
-      marginLeft: 10, 
-      backgroundColor: colors.listItem,  
-      width: '50%', 
-      paddingTop: 12,
+      marginLeft: 4,
+      backgroundColor: colors.listItem,
+      borderRadius: 40,
+      padding: 5,
     },
-    plantImage: { 
-      width: 80, 
-      height: 80, 
-      borderRadius: 10 
+    plantImage: {
+      width: 80,
+      height: 80,
+      borderRadius: 10,
     },
   });
 

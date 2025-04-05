@@ -6,6 +6,7 @@ const getColors = (theme) => {
     font: isDark ? '#ffffff' : '#000000',
     listItem: isDark ? '#254424' : '#ADD0B3',
     date: isDark ? '#bbb' : 'gray',
+    accent: isDark ? '#B0B0B0' : '#E0E0E0',
   };
 };
 
