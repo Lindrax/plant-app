@@ -113,8 +113,8 @@ const getStyles = (colors) =>
     },
     addButton: {
       position: 'absolute',
-      bottom: 20,
-      alignSelf: 'center',
+      bottom: 10,
+     right:20,
       //backgroundColor: colors.accent, // Use a contrasting color for visibility
       borderRadius: 40,
       padding: 15,
