@@ -115,7 +115,7 @@ const getStyles = (colors) =>
       position: 'absolute',
       bottom: 20,
       alignSelf: 'center',
-      backgroundColor: colors.accent, // Use a contrasting color for visibility
+      //backgroundColor: colors.accent, // Use a contrasting color for visibility
       borderRadius: 40,
       padding: 15,
       elevation: 5, 

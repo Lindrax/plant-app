@@ -1,4 +1,5 @@
 # Plant App
+
 A React Native application for a plant database
 
 ## Screenshots
@@ -14,7 +15,6 @@ A React Native application for a plant database
 ### Detail View
 
 <img src="./documents/image-4.png" alt="Detail View (no notes)" width="250"><img src="./documents/image-6.png" alt="Detail View with notes" width="250"><img src="./documents/image-5.png" alt="Edit View" width="250">
-
 
 ## Instructions to Run the App
 
@@ -41,21 +41,21 @@ A React Native application for a plant database
 
 The app follows a component-based architecture using React Native with Expo for easy development and deployment. It is structured into several key components:
 
-- **Context API**: Manages global states for plants and themes.
-- **Navigation**: Uses `react-navigation` to handle tab and stack-based navigation. File structure follows the navigation structure for improved readability
+- **Context API**: Manages global states for plants and themes, ensuring consistent data and theme management across the app.
+- **Navigation**: Uses `react-navigation` to handle both tab-based and stack-based navigation. The file structure mirrors the navigation structure for improved readability and maintainability.
 - **Screens**:
-  - **List Screen**: Displays a list of stored plants. Opportunity to filter shown plants, and delete them. You can click on the plant to see the detail view.
-    - **Scan Screen**: Enables the user to capture and add a new plant.
-    - **Plant Detail View**: Displays plant details with options for editing name, notes and picture. You can choose a picture from your gallery.
-  - **Settings Screen**: Placeholder.
-  - **Profile Screen**: Placeholder
-- **Theme Support**: Implements a dark/light theme using AsyncStorage and React context. Allows uniform theme across the whole app and changes are reflected instantly.
+  - **List Screen**: Displays a list of stored plants with options to filter, delete, and view plant details. Clicking on a plant navigates to the detail view.
+    - **Scan Screen**: Allows users to capture and add a new plant using the camera or gallery.
+    - **Plant Detail View**: Displays detailed information about a plant, including options to edit its name, notes, and image.
+  - **Settings Screen**: Includes options for toggling between dark and light modes, and placeholders for additional settings like notifications.
+  - **Profile Screen**: Displays user profile information, including placeholders and basic statistics like the total number of plants.
+- **Theme Support**: Implements a dark/light theme using AsyncStorage and React Context. The theme is applied uniformly across the app, and changes are reflected instantly.
+- **LocalStorage for Plants**: The app uses `localStorage` to persist the list of plants, ensuring that the data is retained across app reloads.
 
 ### Technical Decisions
 
-- **Expo for development**: Simplifies app setup and camera integration.
-- **Context API for state management**: Lightweight and suitable for the app's needs.
-- **React Navigation**: Provides a clean and scalable navigation system.
-- **AsyncStorage for theme persistence**: Enables user preferences to be saved across sessions.
-
-
+- **Expo for development**: Simplifies app setup, camera integration, and cross-platform compatibility.
+- **Context API for state management**: Lightweight and efficient for managing global states like plants and themes.
+- **React Navigation**: Provides a clean, scalable, and flexible navigation system for both tab and stack navigation.
+- **AsyncStorage for theme persistence**: Ensures user preferences (e.g., dark/light mode) are saved across sessions, providing a seamless user experience.
+- **LocalStorage for plant persistence**: Ensures that the plant data is saved locally, allowing users to retain their plant list even after closing the app.
