@@ -1,6 +1,6 @@
 # Plant App
 
-A React Native application for a plant database
+A React Native application for a plant database. Hosted at https://plant-app.d2clbqnc5vnwxl.amplifyapp.com/
 
 ## Screenshots
 
